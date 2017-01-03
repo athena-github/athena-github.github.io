@@ -1,0 +1,21 @@
+.search_box{overflow:hidden;width:1100px;margin:30px auto 4px;}
+.search_box>div{float:right;}
+.search_box input{height:36px;vertical-align: top;}
+.search_box input[type="text"]{width:600px;padding:0 10px;}
+.search_box input[type="button"]{width:61px;height:40px;margin-left:-3px;background:black;border:0;margin;}
+.search_box>span{font-size:16px;line-height:36px;}
+.search_box>div>div{position: relative;display:inline-block;}
+.search_box>div>div>span{display:inline-block;width:25px;height:23px;background:red;color:red;position:absolute;top:10px;left:15px;background:url(../img/qiyejichanpinku/search_btn.png)}
+
+.contain{overflow:hidden;width:1100px;margin:0 auto;}
+.contain_title{line-height:40px;color:white;font-size:12px;height:40px;padding:0 10px;background:#6F7170;}
+
+.contain_main{width:1100px;height:526px;}
+.contain_main ul li{font-size:12px;width:220px;height:526px;text-align:center;}
+.contain_main ul li h3{margin-top:10px;}
+.contain_main ul li a{text-align:left;display: block;margin-left:40px;line-height:20px;}
+.contain_main ul li a:hover{color:#4B96E0}
+.contain_main ul li div{width:80%;height:1px;background:#DFDFDF;margin:5px auto;}
+.contain_main ul li:nth-child(2),.contain_main ul li:nth-child(4){/*background-image:-webkit-linear-gradient(to top,red)*/background:#F4F4F4}
+
+.service>div{height:120px;padding-top:30px;}

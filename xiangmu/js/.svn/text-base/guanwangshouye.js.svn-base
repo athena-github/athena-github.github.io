@@ -1,0 +1,44 @@
+window.onload = function(){
+	//top选项卡
+//		var title = document.getElementsByClassName("top_title");
+//		var ul = document.getElementsByClassName("top_link_ul");
+//		var num=0;
+//		for(var i=0;i<title.length; i++){
+//			title.index=i;
+//			num=i;
+//			title[i].onmouseover = function(){
+//				if(num==0){
+//					ul.index=num;
+//					ul[num].style.display =  'block';
+//				}else{
+//					ul[num].style.display =  'block';
+//					
+//				}
+//				
+//			}
+//		}
+		
+//		title[1].onmouseover = function(){
+//			title[1].style.display =  'block';
+//		}
+//		title[0].onmouseover = function(){
+//			title[0].style.display =  'block';
+//		}title[0].onmouseover = function(){
+//			title[0].style.display =  'block';
+//		}
+	//搜索框
+		var inputText = document.getElementById("inputText");
+		var btn = document.getElementById("sousuo");
+		var sousuoul = document.getElementById("sousuoul");
+		btn.onmouseover = function(){
+			inputText.style.borderColor = "black";
+		}
+		btn.onmouseout = function(){
+			inputText.style.borderColor = "#d2d2d2";
+		}
+		inputText.onfocus = function(){
+			sousuoul.style.display="none";
+		}
+	
+}	
+	

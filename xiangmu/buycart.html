@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/head&foot.css"/>
+		<link rel="stylesheet" type="text/css" href="css/buycart.css"/>
+		<script src="js/$.js"></script>
+		<script src="js/buycart.js"></script>
+		<script src="js/move.js"></script>
+	</head>
+	<body>
+		<header>
+			<div>
+				<ul>
+					<li><a href="guanwangshouye.html">返回首页</a></li>
+					<li id="user"><a href="#" id="users">1233444444@qq.com</a></li>
+					<li><a href="wodedingdan.html">我的订单</a></li>
+				</ul>
+				<div id="list">
+					<a href="" style="margin-top: 10px;">我的商城</a>
+					<a id="quit">退出登录</a>
+				</div>
+			</div>
+		</header>
+		
+		<section>
+			<div class="sct">
+				<div class="pic">
+					<img src="img/buycart/2016-11-23_223023.png"/>
+					<img src="img/buycart/2016-11-23_223137.png"/>
+				</div>
+				<table style="background: #f8f8f8;margin-bottom: 10px;">
+					<tr style="height: 36px;line-height: 36px;">
+						<th style="width: 400px;" colspan="3">
+							<input type="checkbox" name="" class="all" id="all1"/>
+							<label style="margin-right:136px">全选</label>
+							<span style="margin-right:110px">商品</span>
+						</th>
+						<th style="width: 163px;">规格</th>
+						<th style="width: 152px;">单价</th>
+						<th style="width: 152px;">数量</th>
+						<th style="width: 152px;">金额</th>
+						<th style="width: 117px;">操作</th>
+					</tr>
+				</table>
+				<table>
+					<tr class="delete">
+						<td width="50px" class="tab_sel"><input type="checkbox" name="" class="all" id="all2"></td>
+						<td width="127px" class="tab_img"><a href=""><img src="img/buycart/cjjgyUhdPoFZlk4tkxrrX7eCk-9573.jpg"></a></td>
+						<td width="222px" class="tab_tit"><a href="">联想看家宝Snow man</a></td>
+						<td width="163px">Snowman 720P（珍珠白）</td>
+						<td width="152px" class="price">199.00</td>
+						<td width="152px">
+							<div style="overflow: hidden;margin:0px 29px;">
+								<input type="button" name="" value="-" class="count min"/>
+								<input type="text" name="" value="1" class="num"/>
+								<input type="button" name="" value="+" class="count add"/>
+							</div>
+						</td>
+						<td width="152px" class="tab_red">199.00</td>
+						<td width="117px" style="text-align: left;">
+							<a onclick="javascript:alert()" style="cursor: pointer;">删除</a></br>
+							<a href="">移入收藏夹</a>
+						</td>
+					</tr>
+					<tr class="delete">
+						<td width="43px" class="tab_sel"><input type="checkbox" name="" class="all" id="all3"></td>
+						<td width="111px" class="tab_img"><a href=""><img src="img/buycart/xCgdVlSYlxebuH8ak7yrJJIct-7513.jpg"></a></td>
+						<td width="194px" class="tab_tit"><a href="">联想键盘鼠标套装KM4800</a></td>
+						<td width="163px">黑色</td>
+						<td width="152px" class="price">69.00</td>
+						<td width="152px">
+							<div style="overflow: hidden;margin:0px 29px;">
+								<input type="button" name="" value="-" class="count min"/>
+								<input type="text" name="" value="1" class="num"/>
+								<input type="button" name="" value="+" class="count add"/>
+							</div>
+						</td>
+						<td width="152px" class="tab_red">69.00</td>
+						<td width="117px" style="text-align: left;">
+							<a onclick="javascript:alert()" style="cursor: pointer" id="delete2">删除</a></br>
+							<a href="">移入收藏夹</a>
+						</td>
+					</tr>
+					<tr class="delete">
+						<td width="43px" class="tab_sel"><input type="checkbox" name="" class="all" id="all4"></td>
+						<td width="111px" class="tab_img"><a href=""><img src="img/buycart/ERNAeyHh3wIKB4CEyS4jIf0wv-6372.jpg"></a></td>
+						<td width="194px" class="tab_tit"><a href="">联想UM10C直播版手机麦克风 苹果安卓手机主播K歌话筒 玫瑰金</a></td>
+						<td width="163px">玫瑰金</td>
+						<td width="152px" class="price">399.00</td>
+						<td width="152px">
+							<div style="overflow: hidden;margin:0px 29px;">
+								<input type="button" name="" value="-" class="count min"/>
+								<input type="text" name="" value="1" class="num"/>
+								<input type="button" name="" value="+" class="count add"/>
+							</div>
+						</td>
+						<td width="152px" class="tab_red">399.00</td>
+						<td width="117px" style="text-align: left;">
+							<a onclick="javascript:alert()" style="cursor: pointer" id="delete3">删除</a></br>
+							<a href="">移入收藏夹</a>
+						</td>
+					</tr>
+				</table>
+				<!--结算-->
+				<div class="account">
+					<div class="acc_clear" style="display: inline-block;width: 200px;">
+						<input type="checkbox" name="" class="all" id="all5"/> <label>全选</label>
+						<a href="" style="margin-left: 28px;">删除所选商品</a>
+					</div>
+					<ul>
+						<li class="tolPri">商品总价：0.00 元</li>
+						<li>优惠节省：0.00 元</li>
+						<li>合计：<span class="tab_red tolPri">0.00 元</span></li> 
+					</ul>					
+				</div>
+				<div class="clear"><a href="">去结算</a></div>
+				<!--买了又买-->
+				<div class="lun" style="overflow: hidden;">
+					<h3>
+						<span>买了又买</span>
+						<button style="margin-left: 5px;" id="btn1">></button>							
+						<button id="btn2"><</button>
+					</h3>
+					<ul id="lb">
+						<li>
+							<img src="img/buycart/T83bNHLySqlop3aArC9fkzKps-0089.jpg"/>
+							<p><a href="">联想小新闪存盘 F300-U3 16G</a></p>
+							<p>商城价：99元</p>
+							<div>
+								加入购物车
+							</div>
+						</li>
+						<li>
+							<img src="img/buycart/oPvBLCpdjZqQS6nBRZ280T2A5-2388.jpg"/>
+							<p><a href="">ThinkPad X1 平板电脑轻薄小红点键盘盖（黑）</a></p>
+							<p>商城价：1099元</p>
+							<div>
+								加入购物车
+							</div>
+						</li>
+						<li>
+							<img src="img/buycart/CmPJi1UHIaiAXPjaAAArzxgQCjc595.jpg"/>
+							<p><a href="">联想便携无线路由器R2105黑</a></p>
+							<p>商城价：99元</p>
+							<div>
+								加入购物车
+							</div>
+						</li>
+						<li>
+							<img src="img/buycart/CmPJi1VxtA6AB7pgAAC-t166I68738.jpg"/>
+							<p><a href="">Lenovo S6000L智慧型翻页式皮套(黑色-中国)</a></p>
+							<p>商城价：99元</p>
+							<div>
+								加入购物车
+							</div>
+						</li>
+						<li>
+							<img src="img/buycart/CmPJi1XB0ZCAD_TLAAELfkAHxd8412.jpg"/>
+							<p><a href="">ThinkPad 65W便携旅行电源适配器</a></p>
+							<p>商城价：299元</p>
+							<div>
+								加入购物车
+							</div>
+						</li>
+						<li>
+							<img src="img/buycart/CmPJilSVT1uAfbk2AAAUzD37jQQ057.jpg"/>
+							<p><a href="">联想蓝牙耳机LBH308</a></p>
+							<p>商城价：42元</p>
+							<div>
+								加入购物车
+							</div>
+						</li>
+						<li>
+							<img src="img/buycart/CmPJilUHGzCAFbI8AACYf3SXkFg447.jpg"/>
+							<p><a href="">联想A12智能电源适配器</a></p>
+							<p>商城价：49元</p>
+							<div>
+								加入购物车
+							</div>
+						</li>
+						<li>
+							<img src="img/buycart/CmPJilWJBqyAWv_iAAHPV5djQ_s472.jpg"/>
+							<p><a href="">ThinkPad 蓝光鼠标（魅力红)</a></p>
+							<p>商城价：99元</p>
+							<div>
+								加入购物车
+							</div>
+						</li>						
+					</ul>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div class="service">
+				<div><img src="img/footer_title.jpg"/></div>
+			</div>
+			<div class="aim">
+				<div>
+					<dl>
+						<dt>购物指南</dt>
+						<dd><a href="#">服务商信息</a></dd>
+						<dd><a href="#">购买流程</a></dd>
+						<dd><a href="#">注册登录</a></dd>
+					</dl>
+					<dl>
+						<dt>配送方式</dt>
+						<dd><a href="#">配送方式</a></dd>
+						<dd><a href="#">配送方式信息</a></dd>
+						<dd><a href="#">签收原则</a></dd>
+						<dd><a href="#">物流查询</a></dd>
+					</dl>
+					<dl>
+						<dt>支付方式</dt>
+						<dd><a href="#">支付方式</a></dd>
+						<dd><a href="#">支付问题</a></dd>
+						<dd><a href="#">分期支付</a></dd>
+					</dl>
+					<dl>
+						<dt>订单信息</dt>
+						<dd><a href="#">订单信息</a></dd>
+						<dd><a href="#">其他频道订单发票</a></dd>
+						<dd><a href="#">手机频道订单发票</a></dd>
+					</dl>
+					<dl>
+						<dt>售后服务</dt>
+						<dd><a href="#">Lenovo频道商品售后</a></dd>
+						<dd><a href="#">手机频道商品售后7天</a></dd>
+						<dd><a href="#">无理由退换货说明</a></dd>
+					</dl>
+					<dl style="padding-right:0">
+						<dt>其他说明</dt>
+						<dd><a href="#">服务承诺</a></dd>
+						<dd><a href="#">账户安全</a></dd>
+						<dd><a href="#">产品安全</a></dd>
+					</dl>
+				</div>
+			</div>
+			<div class="foot">
+				<div class="contact">
+					<a href="#">关于联想</a> <span>&nbsp;|&nbsp;</span>
+					<a href="#">联系我们</a> <span>&nbsp;|&nbsp;</span>
+					<a href="#">工作机会</a> <span>&nbsp;|&nbsp;</span>
+					<a href="#">新闻中心</a> <span>&nbsp;|&nbsp;</span>
+					<a href="#">聚享汇会员专享</a> <span>&nbsp;|&nbsp;</span>
+					<a href="#">联想社区</a> <span>&nbsp;|&nbsp;</span>
+					<a href="#">NBD</a> <span>|</span>
+					<span class="place"></span>
+					<a href="#">销售网点</a> <span>&nbsp;|&nbsp;</span>
+					<span class="place" style="background:url(img/head&foot/2016-11-24_224241.png)"></span>
+					<a href="#">服务网点</a>
+				</div>
+				<div class="version">
+					版权所有：1998-2016 联想集团<span>&nbsp;|&nbsp;</span>
+					<a href="#">法律公告</a><span>&nbsp;|&nbsp;</span>
+					<a href="#">隐私保护</a><span>&nbsp;|&nbsp;</span>
+					<a href="#">京ICP备11035381</a><span>&nbsp;|&nbsp;</span>
+					<span>京公网安备110108007970号</span><span>&nbsp;|&nbsp;</span>
+					<a href="#">营业执照：110000410127232</a>
+				</div>
+				<div id="foot_f">
+					<span></span>
+					<div id="flag">
+						China
+						<div></div>
+					</div>
+				</div>
+				<div id="foot_over">
+					<ul>
+						<li><a href="#">Algeria</a></li>
+						<li><a href="#">Angola</a></li>
+						<li><a href="#">ArgentinaBolivia</a></li>
+						<li><a href="#">Botswana</a></li>
+						<li><a href="#">Brazil</a></li>
+						<li><a href="#">Cameroon</a></li>
+						<li><a href="#">Canada - English</a></li>
+						<li><a href="#">Canada - Fran?ais</a></li>
+						<li><a href="#">Denmark</a></li>
+						<li><a href="#">Deutschland</a></li>
+						<li><a href="#">Djibouti</a></li>
+						<li><a href="#">Djibouti</a></li>
+						<li><a href="#">Djibouti</a></li>
+						<li><a href="#">Ecuador</a></li>
+						<li><a href="#">Egypt</a></li>
+						<li><a href="#">Equatorial Guinea</a></li>
+						<li><a href="#">Eritrea</a></li>
+						<li><a href="#">Estonia</a></li>
+						<li><a href="#">Ethiopia</a></li>
+						<li><a href="#">Finland</a></li>
+						<li><a href="#">France</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+		
+		<script type="text/javascript">
+			/*footer*/
+			var flag=document.getElementById('foot_f');
+			var over=document.getElementById('foot_over');
+			function mode(o){
+				over.style.display=o;
+			}
+			flag.onmouseover=function(){
+				mode('block');
+			}
+			flag.onmouseout=function(){
+				mode('none');
+			}
+			over.onmouseover=function(){
+				mode('block');
+			}
+			over.onmouseout=function(){
+				mode('none');
+			}
+						
+			/*下拉列表*/
+			$('#user').onmouseover=function(){
+				$('#list').style.display='block';
+				move(80);
+			}
+			$('#user').onmouseout=function(){
+				move(0);
+			}
+			var timer;
+			function move(iTarget){
+				clearInterval(timer);
+				timer=setInterval(function(){
+					var speed;
+					speed=speed<0?Math.ceil(speed):Math.floor(speed);
+					if($('#list').offsetHeight>iTarget){speed=-5;}
+					if($('#list').offsetHeight<iTarget){speed=5;}
+					if($('#list').offsetHeight===iTarget){
+						clearInterval(timer);
+					}else{
+						$('#list').style.height=$('#list').offsetHeight+speed+'px';
+					}
+				},30)
+			}
+			$('#list').onmouseover=function(){
+				clearInterval(timer);
+				$('#list').style.display='block';
+			}
+			$('#list').onmouseout=function(){
+				move(0);
+			}
+			/**********退出登录********/
+			$('#quit').onclick=function(){
+				$('#users').innerHTML='登录';
+			}
+			/*小轮播*************没有实现*/
+			$('#btn1').onclick=function(){
+				imove($('#lb'),{left:-1100});
+//				if($('#lb').style.left=='-1100px'){$('#lb').style.left='0px';}
+				console.log($('#lb'));
+			}
+			$('#btn2').onclick=function(){
+				imove($('#lb'),{left:0});
+			}
+			/********价格数量*******/
+			for(var i=0;i<$('.add').length;i++){
+				$('.add')[i].index=i;
+				$('.add')[i].onclick=function(){
+					var number=$('.num')[this.index];
+					if(!isNaN(number.value)){
+						if(number.value<5){
+							number.value++;
+							$('.tab_red')[this.index].innerHTML=(parseFloat($('.price')[this.index].innerHTML)*number.value).toFixed(2);		
+						}
+					}else{
+						number.value=1;
+					}
+					var total=parseFloat($('.tab_red')[0].innerHTML)+parseFloat($('.tab_red')[1].innerHTML)+parseFloat($('.tab_red')[2].innerHTML);
+					$('.tolPri')[0].innerHTML='商品总价：'+total.toFixed(2)+'元';
+					$('.tolPri')[1].innerHTML=total.toFixed(2)+'元';
+				}
+			}
+			for(var i=0;i<$('.min').length;i++){
+				$('.min')[i].index=i;
+				$('.min')[i].onclick=function(){
+					var number=$('.num')[this.index];
+					if(!isNaN(number.value)){
+						if(number.value>1){
+							number.value--;
+							$('.tab_red')[this.index].innerHTML=(parseFloat($('.price')[this.index].innerHTML)*number.value).toFixed(2);
+						}
+					}else{
+						number.value=1;
+					}
+					var total=parseFloat($('.tab_red')[0].innerHTML)+parseFloat($('.tab_red')[1].innerHTML)+parseFloat($('.tab_red')[2].innerHTML);
+					$('.tolPri')[0].innerHTML='商品总价：'+total.toFixed(2)+'元';
+					$('.tolPri')[1].innerHTML=total.toFixed(2)+'元';
+				}
+			}
+			/**********全选*********/
+			var bool=$('.all')[0].checked||$('.all')[4].checked;
+			function all(){
+				if(!bool){					
+					check(true);
+					bool=true;
+				}else{
+					check(false);
+					bool=false;
+				}
+			}
+			function check(jud){
+				$('.all')[0].checked=jud;				//checkbox.checked===true
+				$('.all')[1].checked=jud;
+				$('.all')[2].checked=jud;
+				$('.all')[3].checked=jud;
+				$('.all')[4].checked=jud;
+			}
+			$('.all')[0].onclick=function(){
+				all();
+			}
+			$('.all')[4].onclick=function(){
+				all();
+			}
+		</script>
+	</body>
+</html>

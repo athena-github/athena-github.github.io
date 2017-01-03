@@ -1,0 +1,174 @@
+
+/*******banner*********/
+.banner{
+	margin: 0 auto;
+	width:1349px;
+	height:500px;
+	background: no-repeat center center;
+}
+.banner div a.movert{
+	position: absolute;
+    left: 1205px;
+    top: 51%;
+    background-position: 0px 0px;
+}
+.banner div a{
+	position: absolute;
+    left: 129px;
+    top: 50%;
+    display: none;
+    width: 32px;
+    height: 40px;
+    background: url(../img/xiaoxin/192d2d70-23fc-4389-8404-fc33348c6b27_1.png) no-repeat -110px 5px ;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
+.banner ul{
+	width:1100px;
+	height:64px;
+	background:rgba(0,0,0,.5);
+	margin:0 auto;
+}
+.banner ul li a{
+	display: inline-block;
+	padding:16px 5px 17px 5px;
+	font-size:20px;
+	color:#c9c9c9;
+	margin-left:192px;
+}
+.ban_active{
+	color:white;
+	border-bottom: 5px solid #fff;
+}
+.banner ul li a:hover{
+	color:#fff;
+}
+/*******点击后显示的页面***********/
+section{
+	width:100%;
+	background:#f5f5f5;
+	/*height: 3942px;*/
+}
+/*******小新铺子——小新笔记本*******/
+.banner1{
+	display:none;
+}
+.note_tit{
+	width:1100px;
+	margin:0 auto;
+	font-weight:normal;
+	font-size:23px;
+	height:84px;
+	line-height:84px;
+}
+.note ul li a:hover,.note_img a:hover{
+	box-shadow: 0px 0px 70px #999;
+}
+/*******小新铺子——周边*******/
+.note_img,.note_box ul li{
+	width:392px;
+	height:392px;
+	background:#fff;
+}
+.note_img{
+	float:right;
+}
+.note_img a,.note_box ul li a{
+	padding:29px 40px 29px 40px;
+	line-height:30px;
+}
+.note_img a img,.note_box ul li a img{
+	margin:0px 36px;
+}
+.note_img a h6,.note_box ul li a h6{
+	font-weight:normal;
+	font-size:23px;
+	color:#434343;
+}
+.note_img a strong,.note_box ul li a strong{
+	color:#ED4A39;
+	font-size:25px;
+}
+.note_box ul li{
+	margin-right:18px;
+}
+/*******小新铺子——更多*******/
+#more_height{
+	height:967px;
+}
+#more{
+	width:1212px;
+	height:56px;
+	background:#fff;
+	font-size:18px;
+	line-height: 56px;
+	text-align: center;
+	position: absolute;
+	top:3767px;
+	clear: both;
+}
+#more i{
+	display: inline-block;
+	width:19px;
+	height:11px;
+	background: url(../img/xiaoxin/2016-11-27_134319.png) no-repeat center center;
+}
+/************二维码**************/
+.wechat{
+	width: 1212px;
+	background:#f9f9f9;
+	height: 100px;
+	padding: 20px 0px;
+	margin-top:38px;
+	clear: both;
+}
+.wechat div{
+	float: left;
+}
+
+/************小新故事——小新的故事**************/
+#note2{
+	/*position:absolute;*/
+	margin:0 auto;
+}
+.story,.tiantuan{
+	width: 1100px;
+	margin: 0 auto;
+}
+.story ul li{
+	margin-bottom: 30px;
+}
+.story ul li div{
+	display: inline-block;
+	line-height: 40px;
+	font-size: 20px;
+	color: #5b5b5b;
+	margin-left: 54px;
+}
+.tiantuan img{
+	width: 1100px;
+	margin:0 auto;
+}
+.tiantuan p,.note_fan{
+	width: 1100px;
+	line-height: 40px;
+	font-size: 20px;
+	color: #5b5b5b;
+	text-align: center;
+	margin:0 auto;
+}
+/***********小新社区**********/
+#note3{
+	width: 1100px;
+	margin: 0 auto;
+}
+/***********小新社区———粉丝活动**********/
+.note_fan{
+	margin: 30px 0px;
+}
+.activity{
+	width: 1100px;
+}
+.activity a img{
+	width: 530px;
+}

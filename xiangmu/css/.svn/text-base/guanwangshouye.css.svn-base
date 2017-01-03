@@ -1,0 +1,78 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+    margin:0;
+    padding:0;
+}
+
+body{height:1000px;font-size:13px;font-family: "微软雅黑";}
+ul{list-style: none;}
+ul li{float:left;}
+em{font-style:normal;display:inline-block;}
+li,span,img{display:inline-block;}
+a{text-decoration: none;color:black;display: inline-block;}
+a:hover{color:#e2231a;}
+.top_box{background:black;height:38px;width:100%;}
+.top_box ul li{padding:0 5px;}
+.top_box a{color:white;}
+.top_box a:hover{color:#e2231a;}
+.top_cont{width:1100px;height:100%;margin:0 auto;}
+#top_nav{line-height: 38px;}
+#top_nav  em{vertical-align:top;background:white; width:1px; height:14px;margin-top:11px;margin-left:5px;}
+.top_link{display: inline-block;color:white;line-height:38px;}
+.top_link ul{display:none;background:white;width:158px;position:absolute;border:1px solid #d3d3d3;padding-top:5px;}
+.top_link:nth-child(1) ul li{height:35px;}
+.top_link ul.top_link_ul2 {width:236px;padding:8px 0;}
+.top_link ul a{color:black;padding-left:12px;height:31px;}
+.top_link ul a em,.top_login_r em{vertical-align:top;line-height: 31px;}
+.top_title{display:inline-block;height:38px;}
+.top_title1{padding-left:8px;}
+.top_title a{background:url(../img/icons_sprit.png); width:12px; height:12px;background-position:-211px -25px}
+.top_title:hover{color:red;}
+.top_title:hover a{background-position: -196px -25px;}
+.top_title em,.top_login_r em{vertical-align:top;background:white; width:1px; height:14px;margin-top:11px;margin-left:5px;}
+.top_link ul span{width:31px; height:31px;background:url(../img/icons_sprit.png);background-position: -3px -269px;}
+.top_link ul li:nth-child(2) a span{background-position:-38px -270px;}
+.top_link ul li:nth-child(3) a span{background-position:-108px -269px}
+.top_link ul li:nth-child(4) a span{background-position:-209px -269px}
+.top_link ul li:nth-child(5) a span{background-position:-176px -269px}
+.top_link ul li:nth-child(6) a span{background-position:-142px -269px;}
+.top_link ul li:nth-child(7) a span{background-position:-243px -270px;}
+.top_link ul li.phone_d{position:relative;margin-top:30px;margin-left:20px;padding-bottom: 10px;}
+.top_link ul li.phone_d em{background:url(../img/icons_sprit.png);width:76px; height: 76px; background-position: -88px -592px;}
+.top_link ul li.phone_d div{color:black;height:20px;}
+.top_link ul li.phone_d div.t{position:absolute;left:90px;}
+.top_link ul li.phone_d div.t1{top:-10px;}
+.top_link ul li.phone_d div.t2{top:10px;color:red;}
+.top_login_r{float:right;width:180px;}
+.top_login_r a{line-height: 38px;}
+.top_login_r #top_cart_count{text-align:center;color:white;background-image: url(http://pic.shop.lenovo.com.cn/g1/M00/00/F0/CmBZD1ZynUyAUnWjAAGn0mxLsoI703.png);
+background-position: -188px -201px;background-repeat: no-repeat;width: 19px;height: 19px;}	
+.top_login_title span{vertical-align: top;}
+.top_login_title a{margin-left:8px;}
+.logo_box{width:1100px;height:36px;padding-top:30px;margin:0 auto;border-right:0;}
+.logo_box span a{width:189px; height:37px;background:url(../img/icons_sprit.png);background-position:-4px -363px;}
+.logo_box input{border:1px solid #d2d2d2;margin-right:-7px;vertical-align:top;padding:0 10px;width:615px; height:34px;}
+.logo_text{display:inline-block;float:right;}
+.logo_text a{width:61px;height:36px;background:black;}
+.logo_text a:hover{background:#DA2A1B;}
+.logo_text a span{width:25px; height:23px;background:url(../img/icons_sprit.png);background-position:-187px -231px;margin:6px 0 0 18px}
+.logo_text ul li a{height:18px; width:52px;margin-left:10px;background:#eee;text-align: center;}
+.logo_text ul{position: relative;left:340px;top:-25px;}
+.logo_text ul li:hover a{background:#DA2A1B;color:white;}
+.nav_box{font-size:17px;width:1100px;height:56px;margin:0 auto;position: relative;}
+.nav_box ul{position:absolute;left:200px;top:25px;}
+.nav_box ul li{padding-right:35px;}
+.nav_box ul #NEW{background:url(../img/icons_sprit.png);width:32px;height:21px;background-position: -275px -198px;}
+.nav_box ul #HOT{background:url(../img/icons_sprit.png);width:32px;height:21px;background-position: -268px -3px;}
+.nav_box div{display:none;background:white;text-align: center;border:1px solid #d3d3d3;padding:10px;width:150px;position: absolute;left:15px;}
+.nav_box div p{height:30px;}
+.nav_box div a{font-size:13px;}
+.nav_box #fuwu{left:670px;}
+section{width:1100px;margin:0 auto;}
+.banner{width:100%;height:365px;background:green;}
+.banner_lf{font-size:17px;width:190px;height:100%;border:1px solid #e6e6e6;position: relative;}
+.banner_lf ul li a{width:155px;;height:20px;padding:10px 15px 10px 20px;border-bottom:1px solid #e6e6e6 ;}
+.banner_lf ul li span{width:6px; height:9px;background:url(../img/icons_sprit.png);background-position: -84px -36px;position:absolute;left:170px;}
+.list_cont {width:834px; height:343px;background:#f7f7f7;position: absolute;padding: 0 22px 20px 52px;left:190px;top:-1px;border:1px solid #e6e6e6;border-left:0;}
+.list_lt{width:575px;height:100%;display: inline-block;}
+.list_cont img{float:right;margin:5px 0;}
+.list_cont img:nth-child(1){margin-top:-200px;}

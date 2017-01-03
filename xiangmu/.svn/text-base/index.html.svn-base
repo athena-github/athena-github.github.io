@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/guanwangshouye.css">
+		<script src="js/guanwangshouye.js"></script>
+	</head>
+	<body>
+		<div class="top_box">
+			<div class="top_cont">
+				<ul id="top_nav">
+					<li>
+						<a href="#">个人及家用产品库</a>
+						<em></em>
+					</li>
+					<li>
+						<a href="#">商用桌面产品库</a>
+						<em></em>
+					</li>
+					<li>
+						<a href="#">企业级产品库</a>
+						<em></em>
+					</li>
+					<li>
+						<a href="#">聚享汇会员专享</a>
+						<em></em>
+					</li>
+				</ul>
+				<div class="top_link">
+					<div class="top_title top_title1">
+						社交平台
+						<a href="#"></a>
+					</div>
+					<ul class="top_link_ul">
+						<li>
+							<a href="" target="_blank">
+								<span class="top_usepng icont_sina"></span>
+								<em>联想官方微博</em>
+							</a>
+						</li>
+						<li>
+							<a href="" target="_blank">
+								<span class="top_usepng icont_weibo"></span>
+								<em>杨元庆微博</em>
+							</a>
+						</li>
+						<li>
+							<a href="" target="_blank">
+								<span class="top_usepng icont_xiangba"></span>
+								<em>百度贴吧联想吧</em>
+							</a>
+						</li>
+						<li>
+							<a href="" target="_blank">
+								<span class="top_usepng icont_buluo"></span>
+								<em>联想兴趣部落</em>
+							</a>
+						</li>
+						<li>
+							<a href="" target="_blank">
+								<span class="top_usepng icont_kongjian"></span>
+								<em>联想QQ空间</em>
+							</a>
+						</li>
+						<li>
+							<a href="" target="_blank">
+								<span class="top_usepng icont_shequ"></span>
+								<em>联想官方社区</em>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div  class="top_link">
+					<div class="top_title">
+						<em></em>
+						手机版
+						<a href="#"></a>
+					</div>
+					<ul class="top_link_ul2">
+						<li class="phone_d">
+				          	<em class="phoneicon"></em>
+				          	<div class="t1 t">联想商城客户端</div>
+				          	<div class="t2 t">首次下单立减20元</div>
+				          	<img class="phones" src="http://p1.lefile.cn/product/adminweb/2016/06/14/0da8a977-593c-41eb-af5d-5fac4d3f7f52.jpg">
+		         		 </li>
+					</ul>
+				</div>
+				<div class="top_login_r">
+					<ul>
+						<li>
+							<a href="#">登录</a>
+							<em></em>
+						</li>
+						<li>
+							<a href="#">注册</a>
+							<em></em>
+						</li>
+					</ul>
+	    			<div class="top_login_title">
+		    			<a href="#">购物车</a>
+		    			<span id="top_cart_count">0</span>
+	    			</div>
+	    		</div>
+			</div>
+		</div>
+		
+		<div class="logo_box">
+			<span>
+				<a href="#"></a>
+			</span>
+			<div class="logo_text">
+				
+				<input id="inputText" type="text" placeholder="YOGA Tab3 Plus">
+				<a href="#" id="sousuo"><span></span></a>
+				<ul id="sousuoul">
+					<li><a href="#">MIIX</a></li>
+					<li><a href="#">拯救者</a></li>
+					<li><a href="#">New S2</a></li>
+					<li><a href="#">小新</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="nav_box">
+			<a href="#">
+				<img src="http://p3.lefile.cn/product/adminweb/2016/11/07/2b6bc6a8-2f16-45ee-8f96-741fc25054cd_1.gif">
+			</a>
+			<ul>
+				<li><a href='#'>12.12</a></li>
+				<li>
+					<a href='#'>爆款</a>
+					<div id="baokuan">
+						<p></p>
+						<p><a href="#">小新Air 12</a></p>
+						<p><a href="#">小新Air13 Pro</a></p>
+						<p><a href="#">小新310</a></p>
+						<p><a href="#">拯救者游戏本</a></p>
+						<p><a href="#">ThinkPad New S2</a></p>
+						<p><a href="#">看家宝Snowman</a></p>
+						<p><a href="#">小新700</a></p>
+						<p><a href="#">MIIX5</a></p>
+						<p><a href="#">YOGA BOOK</a></p>
+					</div>
+				</li>
+				<li><a href='#'>小新铺子</a><em id="NEW"></em><span></span></li>
+				<li><a href='#'>联想合伙人</a><em id="HOT"></em><span></span></li>
+				<li><a href='#'>0元试用</a></li>
+				<li><a href='#'>以旧换新</a></li>
+				<li><a href='#'>私人订制</a></li>
+				<li>
+					<a href='#'>服务</a>
+					<div id="fuwu">
+						<p><a href="#">服务支持</a></p>
+						<p><a href="#">驱动下载</a></p>
+						<p><a href="#">联想知识库</a></p>
+					</div>
+				</li>
+				<li><a href='#'>社区</a></li>
+			</ul>
+		</div>
+		<section>
+			<div class="banner">
+				<div class="banner_lf">
+					<ul>
+						<li>
+							<a href="#">Lenovo 电脑
+								<span></span>
+							</a>
+							<div class="list_cont">
+								<div class="list_lt">
+									
+								</div>
+								<img src="img/list_lt1.jpg">
+								<img src="img/list_lt2.jpg">
+							</div>
+						</li>
+						<li>
+							<a href="#">ThinkPad 电脑
+								<span></span>
+							</a>
+						</li>
+						<li>
+							<a href="#">平板电脑
+								<span></span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#">手机         
+								<span></span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#">通信卡
+								<span></span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#">打印机
+								<span></span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#">智能数码
+								<span></span>
+							</a>
+						</li>
+						<li>
+							<a href="#">电脑增值服务
+								<span></span>
+							</a>
+						</li>
+						<li>
+							<a href="#">商用产品
+								<span></span>
+							</a>
+						</li>
+					</ul>
+					
+					
+					
+					
+					
+					
+					
+					
+				</div>
+				<div class="banner_center"></div>
+				<div class="banner_rt"></div>
+				
+				
+				
+			</div>
+			
+			
+			
+			
+			
+			
+		</section>
+	</body>
+</html>

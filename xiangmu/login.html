@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{margin:0;padding:0}
+			body{font-family:"微软雅黑";}
+			a{text-decoration:none;color:#005CE6;}
+			input{outline:none;}
+			#container{width:429px;height:361px;margin:0 auto;margin-top:100px;background:#fdfdde;}
+			#top{height:37px;background:#000;color:#fff;font-size:18px;
+				 line-height:37px;padding:0px 15px;}
+			#top+div{padding:15px 33px;}
+			.user{overflow: hidden;}
+			.user span:first-child{padding:4px 5px;border:1px solid #c2c2c2;
+					   font-size:12px;float:left;border-right:none;letter-spacing:2px;}
+			.user input{padding:3.5px 5px;float:left;width:279px;}
+			input+div,#code_con{color:red;font-size:10px;height:25px;float:left;width:200px;padding-top:5px;}
+			.code #auth{letter-spacing:8px;}
+			.code input{width:116px;}
+			#code_con{padding:0}
+			.agree{font-size:10px;letter-spacing:1px;}
+			#sbm input{width:360px;height:24px;background:#EF1C22;border-radius:5px;border:none;color:#fff;margin:10px 0px;}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id="top">欢迎注册联想会员</div>
+			<div>
+				<form method="get" onsubmit="return checkForm()" action="register.html">
+					<div class="user">
+						<span>账&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号</span>
+						<input type="text" name="username" placeholder="请输入手机号或邮箱" id="username" onchange="checkUsername()"/><div></div>
+					</div>
+					<div class="psd user">
+						<span>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码</span>
+						<input type="password" name="password" placeholder="密码长度8-20位数字字母" id="password" onchange="checkPsd()"/><div></div>
+					</div>
+					<div class="repsd user">
+						<span>确认密码</span>
+						<input type="password" name="confirmpsd" id="confirmPsd" onchange="confirmPassword()"/><div></div>
+					</div>
+					<div class="code user">
+						<span id="auth">验证码</span>
+						<input type="text" name="code" id="code" onblur="checkCode()"/>
+						<img src="img/login/code1.png" style="vertical-align: top;margin:0 2px"/>
+						<span style="font-size:10px;color:#000;" id="changeImg">换一张</span>
+						<div id="code_con"></div>
+					</div>
+					<div class="agree">
+						<input type="checkbox" name="" id="agree" checked="checked"/><label>&nbsp;同意联想的<a href="#">使用条款</a>和<a href="#">隐私权政策</a></label>
+					</div>
+					<div id="sbm"><input type="submit" value="立即注册"/></div>
+				</form>
+			</div>
+		</div>
+		<script type="text/javascript">
+			function checkUsername()
+			{
+				var userName=document.getElementById('username');
+				var regexp1=/^1[34578]\d{9}$/;
+				var regexp2=/\w+@\w+(-\w+)*(\.\w+)+/;
+				console.log(userName.value);
+				if(userName.value=='')
+				{
+					userName.nextSibling.innerHTML='账号不能为空';
+					return false;
+				}
+				else if(regexp1.test(userName.value)||regexp2.test(userName.value))
+				{
+					userName.nextSibling.innerHTML='';
+					return true;
+				}
+				else
+				{
+					userName.nextSibling.innerHTML='请输入正确格式的账号';
+					return false;
+				}
+				
+			}
+			
+			function checkPsd(){
+				var psd=document.getElementById('password');
+				var regexp3=/^[0-9A-z]{8,20}$/i;
+				if(regexp3.test(psd.value)){
+					psd.nextSibling.innerHTML='';
+					return true;
+				}else{
+					psd.nextSibling.innerHTML='密码格式为数字字母，字符至少两种';
+					return false;
+				}
+			}
+			
+			function confirmPassword(){
+				var rePsd=document.getElementById('confirmPsd');
+				var psd=document.getElementById('password');
+				if(rePsd.value==psd.value){
+					rePsd.nextSibling.innerHTML='';
+					return true;
+				}else{
+					rePsd.nextSibling.innerHTML='确认密码和密码不一致，请重新输入';
+					return false;
+				}
+			}
+			
+			var change=document.getElementById('changeImg');
+			change.onclick=function(){
+				change.style.cursor='pointer';
+				var pic=parseInt(Math.random()*3);
+				var code=document.getElementById('code');
+				code.nextElementSibling.src='img/login/code'+pic+'.png';
+			}
+			
+			function checkCode(){
+				var code=document.getElementById('code');
+				var codeCon=document.getElementById('code_con');
+				if(code.value==''){
+					codeCon.innerHTML='验证码不能为空';
+					return false;
+				}else{
+					return true;
+				}
+			}
+			
+			function checkForm(){
+				if(checkUsername()&&checkPsd()&&confirmPassword()&&checkCode()){
+					alert("注册成功")
+					return true;
+				}else{
+					return false;
+				}
+			}
+		</script>
+	</body>
+</html>

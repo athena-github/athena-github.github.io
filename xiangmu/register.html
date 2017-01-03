@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin:0;padding:0}
+			body{font-family:"微软雅黑";}
+			input{outline:none;}
+			a{text-decoration:none;color:#005CE6;}
+			#container{width:429px;height:306px;background:#fdfdde;margin:0 auto;margin-top:100px;}
+			header{height:36px;background:#000;line-height:33px;}
+			h4{float:left;color:#fff;font-weight:normal;width:50%;text-align:center;}
+			.active{color:#F10000;border-bottom:2px solid #f10000;}
+			section{padding:35px 44px;font-size:14px;overflow:hidden;}
+			.ipt{overflow:hidden;margin:3px 0px;}
+			.ipt span:first-child{display:inline-block;width:30px;height:29px;background:url(img/register/2016-11-23_130936.png) no-repeat center center;
+					 float:left;border:1px solid #C2C2C2;border-right:none;}
+			#username,#password,#username1,#password1{height:17px;width:295px;padding:5px;}
+			#paswd span:first-child{background:url(img/register/2016-11-23_133945.png) no-repeat center center;}
+			#password+span,#btn+span{color:red;padding:5px;}
+			#password1{width:190px;}
+			#btn{padding:5px;}
+			#auto{margin-top:8px;margin-right:5px;}
+			input.sub{width:340px;background:#EF1C22;border:none;border-radius:5px;padding:3px 0px;margin:8px 0px;color:#fff;}
+			#btn+span{padding:0px 10px;}
+			.no{display: none;}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<header>
+				<h4 class="active" onclick="show(0)">普通登录</h4>
+				<h4 onclick="show(1)">快捷登录</h4>
+			</header>
+			<section>
+				<form method="get" onsubmit="return checkForm()" style="position:relative" action="guanwangshouye.html">
+					<div id="title0">
+						<div id="user" class="ipt">
+							<span></span>
+							<input type="text" name="" placeholder="请输入手机号或邮箱" id="username" onchange="checkUsername()"/>
+						</div>
+						<div id="paswd" class="ipt">
+							<span></span>
+							<input type="password" name="" placeholder="密码" id="password" onchange="checkPassword()"/><span></span>
+						</div>
+					</div>
+					<div id="title1" class="no">
+						<div id="user1" class="ipt">
+							<span></span>
+							<input type="text" name="" placeholder="请输入手机号" id="username1" onchange="checkUsername1()"/>
+						</div>
+						<div id="paswd1" class="ipt">
+							<span></span>
+							<input type="text" name="" placeholder="动态密码" id="password1"/>
+							<input type="button" id="btn" onclick="getting()" value="获取动态密码" style="font-size:10px;"><span></span>
+						</div>
+					</div>
+					<input type="checkbox" checked="checked" name="" id="auto"/><label>自动登录</label>
+					<input type="submit" value="登&nbsp;&nbsp;录" name="" class="sub"/>
+				</form>
+				<a href="login.html" style="float: left;">立即注册</a>
+				<a href="#" style="float: right;">忘记密码</a>
+				<div style="clear: both;padding-top:10px;">
+					使用合作网站账号登录:
+					<div>
+						<a href="#" style="margin-right:15px;"><img src="img/register/ico_qq.png" title="QQ登录"/></a>
+						<a href="#" style="margin-right:15px;"><img src="img/register/2016-11-23_141444.png" title="微博登录"/></a>
+						<a href="#" style="margin-right:15px;"><img src="img/register/2016-11-23_141519.png" title="微信登录"/></a>
+						<a href="#" style="margin-right:15px;"><img src="img/register/2016-11-23_141539.png" title="支付宝登录"/></a>
+					</div>
+				</div>
+			</section>
+		</div>
+		
+		<script src="js/$.js"></script>
+		<script type="text/javascript">
+			var h=document.getElementsByTagName('h4');			
+			var cur=0;	//显示当前的div编号
+			function show(num){
+				if(cur!=num){
+					var jiu=document.getElementById('title'+num);
+					jiu.removeAttribute('class');
+					h[num].setAttribute('class','active');
+					var xin=document.getElementById('title'+cur);
+					xin.setAttribute('class','no');
+					h[cur].removeAttribute('class');
+					cur=num;
+				}
+			}
+			
+			function checkUsername()
+			{
+				var userName=document.getElementById('username');
+				var psd=document.getElementById('password');
+				var regexp1=/^1[34578]\d{9}$/;
+				var regexp2=/\w+@\w+(-\w+)*(\.\w+)+/;
+				if(userName.value=='')
+				{
+					psd.nextSibling.innerHTML='账号格式错误';
+					return false;
+				}
+				else if(regexp1.test(userName.value)||regexp2.test(userName.value))
+				{
+					psd.nextSibling.innerHTML='';
+					return true;
+				}
+				else
+				{
+					psd.nextSibling.innerHTML='请输入正确格式的账号';
+					return false;
+				}	
+			}
+			
+			function checkPassword(){
+				var psd=document.getElementById('password');
+				if(psd.value=='')
+				{
+					psd.nextSibling.innerHTML='密码不能为空';
+					return false;
+				}else{
+					return true;
+				}
+			}
+			function checkUsername1()
+			{
+				var userName1=document.getElementById('username1');
+				var btn=document.getElementById('btn');
+				var regexp=/^1[34578]\d{9}$/;
+				if(regexp.test(userName1.value))
+				{
+					btn.nextSibling.innerHTML='';
+					return true;
+				}else{
+					btn.nextSibling.innerHTML='手机号码格式错误';
+					return false;
+				}
+			}
+
+			function getting(){
+				var num=0;
+				var max=60;
+				var btn=document.getElementById('btn');
+				function box(){
+					num++;
+					if(num===max){
+						btn.value='重新获取动态密码';
+					}else{
+						btn.value=(max-num)+'秒后重新获取';
+						window.setTimeout(box,1000);
+					}
+				}
+				
+				window.setTimeout(box);	//执行定时器
+			}
+			
+			function checkForm(){
+				if(checkUsername()&&checkPassword()||checkUsername1()){
+					return true;
+				}else{
+					return false;
+				}
+			}
+			/***************cookie**************/
+			function setCookie(key,val,d){
+				var now=new Date();
+				now.setTime(now.getTime()+d*24*3600*1000);
+				document.cookie=key.value+'='+encodeURIComponent(val.value)+';expires='+now.toGMTString();
+			}	
+			$('#username').onblur=function(){
+				var cookie=decodeURIComponent(document.cookie);	//字符串
+				console.log(cookie);
+				var str=cookie.split(';');		//数组
+				for(var i=0;i<cookie.length;i++){
+					if($('#username').value==str[i].split('=')[0].trim()){
+						$('#password').value=str[i].split('=')[1].trim();
+					}
+				}
+			}
+			console.log($('#username'));
+			
+			$('.sub')[0].onclick=function(){
+				if($('#auto').checked){
+					setCookie($('#username'),$('#password'),30);
+					console.log(document.cookie);
+				}else{
+					setCookie($('#username'),$('#password'),-1);
+				}
+				console.log(document.cookie);
+			}
+		</script>
+	</body>
+</html>
