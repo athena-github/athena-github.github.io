@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+	</head>
+	<body>
+		<canvas width="800" style="border:1px solid black"></canvas>
+		<canvas id="canvas2" width="" height=""></canvas>
+		<script>
+			var canvas = document.querySelector("canvas");
+				canvas2 =document.querySelector("#canvas2"); 
+			var ctx = canvas.getContext("2d");
+				ctx2 = canvas2.getContext("2d");
+			var radius = 100;
+			var bool=false;
+			
+			var img = new Image();
+			img.src="src/girl.jpg";
+			img.onload = function(){
+				var imgW = this.width;
+				var imgH = this.height;
+				canvas2.width = imgW;
+				canvas2.height = imgH;
+				canvas.height = imgH*canvas.width/imgW;
+				
+				ctx.drawImage(this,0,0,canvas.width,canvas.height);
+				ctx2.drawImage(this,0,0);
+				
+				canvas.onmousemove = function(e){
+					if(bool){
+						drawArc(e,1);
+					}
+					return false;
+				}
+				canvas.onmousedown = function(e){
+					bool=true;
+					drawArc(e,1);
+					return false;
+				}
+				window.onmouseup = function(){
+					bool=false;
+					clear();
+				}
+				
+			}
+			function clear(){
+				ctx.clearRect(0,0,canvas.width,canvas.height);
+			    ctx.drawImage(img,0,0,canvas.width,canvas.height);
+			}
+			function drawArc(e,a){
+				var e=window.event || e;   
+				console.log(a)
+				var point = windowToCanvas(e);
+				clear();
+				
+				ctx.save();
+				ctx.beginPath();
+				ctx.strokeStyle="rgba(255,255,255,.5)";
+				ctx.lineWidth = 5;
+				ctx.arc(point.x,point.y,radius,0,2*Math.PI,false);
+				ctx.stroke();
+				
+				ctx.clip();
+				var scale = canvas.width/canvas2.width;
+				var sx = point.x/scale-radius;
+				var sy = point.y/scale-radius;
+				var dx = point.x-radius;
+				var dy = point.y-radius;
+				
+				ctx.drawImage(canvas2,sx,sy,2*radius,2*radius,dx,dy,2*radius,2*radius);
+				ctx.restore();
+			}
+			function windowToCanvas(e){
+				var rect = canvas.getBoundingClientRect();
+				return{
+					x:e.clientX-rect.left,
+					y:e.clientY-rect.top
+				}
+			}
+			
+			
+			
+		</script>
+		
+		
+	</body>
+</html>
