@@ -1,0 +1,56 @@
+@import "home furnishing--homePage1";
+
+$personSize:1.3em;
+$personBorderColor:#ccc;
+
+.wrapper{top:0;}
+.scroller{padding:10px;
+    >p{border-bottom:1px solid $personBorderColor;padding:10px;font-size: $personSize;
+        >img{width:1.5rem;height:1.5rem;}
+        >span{vertical-align: top;line-height: 0.7rem;
+            >small{display: block;}
+        }
+        
+    }
+    >ul{
+        li{height:1.5rem;line-height:1.5rem;border-bottom:1px solid $personBorderColor;position: relative;
+           a>i{font-size:3em;};
+           a>span{font-size:$personSize;margin-left:1em;}
+           a>i:first-child{color:white;border-radius: 50%;}
+
+           a>i.icon-dayuhao{font-size:1.3em;font-weight: bold;position: absolute;right:18px;top:3px;}
+        }
+       li:first-child i:first-child{background:#f36100;}
+       li:nth-child(2) i:first-child{background:#f39800;}
+       li:nth-child(3) i:first-child{background:#e54494;}
+       li:nth-child(4) i:first-child{background:#d51945;}
+       li:nth-child(5) i:first-child{background:#28b3e1;}
+       li:nth-child(6) i:first-child{background:#5d47e0;}
+       li:nth-child(7) i:first-child{background:#247dc8;}
+       li:nth-child(8) i:first-child{background:#ed1676;}
+       li:nth-child(9) i:first-child{background:#1fca94;}
+        
+        
+    }
+}
+
+
+footer>ul>li.person-center{
+    i,p{color:nth($fontColor,2);}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
